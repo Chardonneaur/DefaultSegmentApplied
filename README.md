@@ -18,6 +18,42 @@ This is a **per-user setting**: each authenticated user can choose their own def
 - Per-user preference — does not affect other users
 - Multilingual support (English, French)
 
+## Use Cases
+
+Here are practical scenarios where DefaultSegmentApplied saves time and streamlines your workflow:
+
+### 1. Mobile Marketing Manager
+
+You are responsible for mobile acquisition and only care about mobile visitors. You create a segment **"Browser type is mobile"** and set it as your default. Every time you open Matomo, all reports automatically show mobile traffic — no manual selection needed.
+
+![Setting a default segment in Personal Settings](screenshots/personal_settings_default_segment.png)
+
+### 2. Regional Sales Team
+
+Your sales team is split by geography. Each regional manager creates a segment for their country (e.g., **"Country is France"**) and sets it as their default. When they log in, they immediately see data relevant to their region without having to remember to apply a filter.
+
+### 3. Campaign Analyst
+
+You are tracking a long-running campaign and need to monitor visitors who arrived via a specific campaign tag. You set a segment like **"Campaign name is summer_2025"** as your default. For the duration of the campaign, every report you open is pre-filtered to that campaign's traffic.
+
+### 4. E-commerce Product Owner
+
+You manage a specific product category and want to focus on visitors who viewed products in that category. By setting a segment such as **"Product category is Electronics"**, all your dashboards and reports reflect only the audience you care about.
+
+### 5. QA / Internal Traffic Exclusion
+
+Your QA team browses the site frequently and skews the data. You create a segment **"Visitor IP is not 192.168.1.0/24"** to exclude internal traffic and set it as your default. Now every report you view automatically excludes QA visits.
+
+> **Tip:** You can change or remove your default segment at any time from **Administration > Personal > Settings**. Selecting **"All Visits"** disables the automatic filter. Manually selecting a different segment in the segment bar always takes priority over the default.
+
+## Screenshots
+
+Screenshots illustrating the plugin's features are located in the [`screenshots/`](screenshots/) directory. If you are a contributor, please add annotated screenshots showing:
+
+1. The **Default Segment** dropdown in Personal Settings
+2. A report page with the default segment automatically applied
+3. The segment bar showing the auto-applied segment
+
 ## Requirements
 
 - Matomo >= 5.0.0, < 6.0.0
@@ -87,6 +123,10 @@ DefaultSegmentApplied/
 ├── lang/
 │   ├── en.json                 # English translations
 │   └── fr.json                 # French translations
+├── screenshots/                # Screenshots for Marketplace display
+├── docs/
+│   └── faq.md                  # FAQ tab on the Marketplace
+├── CHANGELOG.md                # Changelog tab on the Marketplace
 ├── plugin.json                 # Plugin metadata
 ├── LICENSE                     # GPL v3
 └── README.md                   # This file
@@ -115,6 +155,7 @@ To add a new language, create a JSON file in the `lang/` directory following the
 | `DefaultSegmentApplied_DefaultSegment` | Label for the setting |
 | `DefaultSegmentApplied_NoDefaultSegment` | Label when no segment is set |
 | `DefaultSegmentApplied_Description` | Description text shown under the setting |
+| `DefaultSegmentApplied_InlineHelp` | Use case example shown as inline help next to the setting |
 
 ## License
 

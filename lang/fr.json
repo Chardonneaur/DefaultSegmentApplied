@@ -1,6 +1,9 @@
 {
-    "DefaultSegmentApplied_PluginDescription": "Permet de définir un segment par défaut qui sera automatiquement appliqué lors de la consultation des rapports.",
-    "DefaultSegmentApplied_DefaultSegment": "Segment par défaut",
-    "DefaultSegmentApplied_NoDefaultSegment": "Aucun segment par défaut",
-    "DefaultSegmentApplied_Description": "Ce segment sera automatiquement appliqué lors de la consultation des rapports (uniquement si aucun segment n'est déjà présent dans l'URL)."
+    "DefaultSegmentApplied": {
+        "PluginDescription": "Permet de définir un segment par défaut qui sera automatiquement appliqué lors de la consultation des rapports.",
+        "DefaultSegment": "Segment par défaut",
+        "NoDefaultSegment": "Aucun segment par défaut",
+        "Description": "Ce segment sera automatiquement appliqué lors de la consultation des rapports (uniquement si aucun segment n'est déjà présent dans l'URL).",
+        "InlineHelp": "<strong>Exemple d'utilisation :</strong> Si vous êtes responsable marketing mobile et que vous devez toujours consulter les données filtrées sur les visiteurs mobiles, sélectionnez un segment comme %1$sType de navigateur est mobile%2$s. Chaque fois que vous ouvrez Matomo, vos rapports afficheront automatiquement uniquement le trafic mobile — plus besoin de sélectionner manuellement le segment à chaque fois."
+    }
 }

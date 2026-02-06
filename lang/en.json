@@ -1,6 +1,9 @@
 {
-    "DefaultSegmentApplied_PluginDescription": "Set a default segment to be automatically applied when viewing reports.",
-    "DefaultSegmentApplied_DefaultSegment": "Default Segment",
-    "DefaultSegmentApplied_NoDefaultSegment": "No default segment",
-    "DefaultSegmentApplied_Description": "This segment will be automatically applied when viewing reports (only when no segment is already in the URL)."
+    "DefaultSegmentApplied": {
+        "PluginDescription": "Set a default segment to be automatically applied when viewing reports.",
+        "DefaultSegment": "Default Segment",
+        "NoDefaultSegment": "No default segment",
+        "Description": "This segment will be automatically applied when viewing reports (only when no segment is already in the URL).",
+        "InlineHelp": "<strong>Example use case:</strong> If you are a mobile marketing manager and always need to see data filtered to mobile visitors, select a segment like %1$sBrowser type is mobile%2$s. Every time you open Matomo, your reports will automatically show mobile traffic only — no need to manually select the segment each time."
+    }
 }

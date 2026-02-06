@@ -41,6 +41,7 @@ class UserSettings extends BaseUserSettings
             $field->description = Piwik::translate('DefaultSegmentApplied_Description');
             $field->uiControl = FieldConfig::UI_CONTROL_SINGLE_SELECT;
             $field->availableValues = $this->getAvailableSegments();
+            $field->inlineHelp = Piwik::translate('DefaultSegmentApplied_InlineHelp', ['<em>', '</em>']);
             $field->validate = function ($value) {
                 if ($value === '' || $value === null) {
                     return;

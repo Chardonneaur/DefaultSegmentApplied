@@ -18,5 +18,6 @@
         "issues": "https://github.com/Chardonneaur/DefaultSegmentApplied/issues",
         "source": "https://github.com/Chardonneaur/DefaultSegmentApplied"
     },
-    "keywords": ["segment", "default", "settings", "personal", "user preferences"]
+    "keywords": ["segment", "default", "settings", "personal", "user preferences"],
+    "category": "customisation"
 }
