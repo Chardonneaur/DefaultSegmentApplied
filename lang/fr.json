@@ -1,0 +1,6 @@
+{
+    "DefaultSegmentApplied_PluginDescription": "Permet de définir un segment par défaut qui sera automatiquement appliqué lors de la consultation des rapports.",
+    "DefaultSegmentApplied_DefaultSegment": "Segment par défaut",
+    "DefaultSegmentApplied_NoDefaultSegment": "Aucun segment par défaut",
+    "DefaultSegmentApplied_Description": "Ce segment sera automatiquement appliqué lors de la consultation des rapports (uniquement si aucun segment n'est déjà présent dans l'URL)."
+}

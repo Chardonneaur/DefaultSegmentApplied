@@ -1,0 +1,22 @@
+{
+    "name": "DefaultSegmentApplied",
+    "description": "Allows users to set a default segment that is automatically applied when viewing reports.",
+    "version": "1.0.0",
+    "theme": false,
+    "require": {
+        "matomo": ">=5.0.0,<6.0.0"
+    },
+    "authors": [
+        {
+            "name": "Chardonneaur",
+            "homepage": "https://github.com/Chardonneaur"
+        }
+    ],
+    "license": "GPL v3+",
+    "homepage": "https://github.com/Chardonneaur/DefaultSegmentApplied",
+    "support": {
+        "issues": "https://github.com/Chardonneaur/DefaultSegmentApplied/issues",
+        "source": "https://github.com/Chardonneaur/DefaultSegmentApplied"
+    },
+    "keywords": ["segment", "default", "settings", "personal", "user preferences"]
+}

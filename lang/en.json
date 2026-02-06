@@ -1,0 +1,6 @@
+{
+    "DefaultSegmentApplied_PluginDescription": "Set a default segment to be automatically applied when viewing reports.",
+    "DefaultSegmentApplied_DefaultSegment": "Default Segment",
+    "DefaultSegmentApplied_NoDefaultSegment": "No default segment",
+    "DefaultSegmentApplied_Description": "This segment will be automatically applied when viewing reports (only when no segment is already in the URL)."
+}
