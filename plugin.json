@@ -1,7 +1,7 @@
 {
     "name": "DefaultSegmentApplied",
     "description": "Allows users to set a default segment that is automatically applied when viewing reports.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "theme": false,
     "require": {
         "matomo": ">=5.0.0,<6.0.0"

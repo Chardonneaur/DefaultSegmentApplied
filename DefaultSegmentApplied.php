@@ -35,8 +35,22 @@ class DefaultSegmentApplied extends Plugin
             $userSettings = new UserSettings();
             $defaultSegment = $userSettings->defaultSegment->getValue();
 
+            // Fallback to system-wide admin default if user has no personal segment
+            if (empty($defaultSegment)) {
+                $systemSettings = new SystemSettings();
+                $defaultSegment = $systemSettings->defaultSegmentForAllUsers->getValue();
+
+                if ($defaultSegment && !$systemSettings->segmentExists($defaultSegment)) {
+                    $defaultSegment = '';
+                }
+            } else {
+                if (!$userSettings->segmentExists($defaultSegment)) {
+                    $defaultSegment = '';
+                }
+            }
+
             $encoded = $defaultSegment ? json_encode($defaultSegment, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) : false;
-            if ($encoded !== false && $userSettings->segmentExists($defaultSegment)) {
+            if ($encoded !== false) {
                 $out .= "    piwik.defaultSegment = $encoded;\n";
             } else {
                 $out .= "    piwik.defaultSegment = '';\n";

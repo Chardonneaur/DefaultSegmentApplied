@@ -14,19 +14,19 @@ use Piwik\Log\LoggerInterface;
 use Piwik\Piwik;
 use Piwik\Plugins\SegmentEditor\API as SegmentEditorAPI;
 use Piwik\Settings\FieldConfig;
-use Piwik\Settings\Plugin\UserSettings as BaseUserSettings;
+use Piwik\Settings\Plugin\SystemSettings as BaseSystemSettings;
 
-class UserSettings extends BaseUserSettings
+class SystemSettings extends BaseSystemSettings
 {
-    /** @var \Piwik\Settings\Plugin\UserSetting */
-    public $defaultSegment;
+    /** @var \Piwik\Settings\Plugin\SystemSetting */
+    public $defaultSegmentForAllUsers;
 
     /** @var array|null */
     private $cachedSegments = null;
 
     protected function init()
     {
-        $this->defaultSegment = $this->createDefaultSegmentSetting();
+        $this->defaultSegmentForAllUsers = $this->createDefaultSegmentSetting();
     }
 
     public function segmentExists($definition)
@@ -36,13 +36,12 @@ class UserSettings extends BaseUserSettings
 
     private function createDefaultSegmentSetting()
     {
-        return $this->makeSetting('defaultSegment', '', FieldConfig::TYPE_STRING, function (FieldConfig $field) {
-            $field->title = Piwik::translate('DefaultSegmentApplied_DefaultSegment');
-            $field->description = Piwik::translate('DefaultSegmentApplied_Description');
+        return $this->makeSetting('defaultSegmentForAllUsers', '', FieldConfig::TYPE_STRING, function (FieldConfig $field) {
+            $field->title = Piwik::translate('DefaultSegmentApplied_DefaultSegmentForAllUsers');
+            $field->description = Piwik::translate('DefaultSegmentApplied_SystemDescription');
             $field->uiControl = FieldConfig::UI_CONTROL_SINGLE_SELECT;
             $field->availableValues = $this->getAvailableSegments();
-            $field->inlineHelp = Piwik::translate('DefaultSegmentApplied_InlineHelp', ['<em>', '</em>'])
-                . '<br/><br/>' . Piwik::translate('DefaultSegmentApplied_UserFallbackNote');
+            $field->inlineHelp = Piwik::translate('DefaultSegmentApplied_SystemInlineHelp');
             $field->validate = function ($value) {
                 if ($value === '' || $value === null) {
                     return;

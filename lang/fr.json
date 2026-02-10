@@ -4,6 +4,10 @@
         "DefaultSegment": "Segment par défaut",
         "NoDefaultSegment": "Aucun segment par défaut",
         "Description": "Ce segment sera automatiquement appliqué lors de la consultation des rapports (uniquement si aucun segment n'est déjà présent dans l'URL).",
-        "InlineHelp": "<strong>Exemple d'utilisation :</strong> Si vous êtes responsable marketing mobile et que vous devez toujours consulter les données filtrées sur les visiteurs mobiles, sélectionnez un segment comme %1$sType de navigateur est mobile%2$s. Chaque fois que vous ouvrez Matomo, vos rapports afficheront automatiquement uniquement le trafic mobile — plus besoin de sélectionner manuellement le segment à chaque fois."
+        "InlineHelp": "<strong>Exemple d'utilisation :</strong> Si vous êtes responsable marketing mobile et que vous devez toujours consulter les données filtrées sur les visiteurs mobiles, sélectionnez un segment comme %1$sType de navigateur est mobile%2$s. Chaque fois que vous ouvrez Matomo, vos rapports afficheront automatiquement uniquement le trafic mobile — plus besoin de sélectionner manuellement le segment à chaque fois.",
+        "UserFallbackNote": "Si vous laissez ce champ vide et qu'un administrateur a configuré un segment par défaut pour tous les utilisateurs, ce segment sera utilisé à la place.",
+        "DefaultSegmentForAllUsers": "Segment par défaut pour tous les utilisateurs",
+        "SystemDescription": "Ce segment sera automatiquement appliqué pour tout utilisateur n'ayant pas défini de segment par défaut personnel dans ses propres paramètres.",
+        "SystemInlineHelp": "<strong>Paramètre administrateur :</strong> Choisissez un segment à appliquer par défaut pour tous les utilisateurs qui n'ont pas configuré leur propre segment par défaut personnel. Les utilisateurs peuvent remplacer ce choix en définissant un segment par défaut personnel dans leurs Paramètres personnels."
     }
 }
